@@ -28,7 +28,6 @@ function getPassword() {
 }
 
 function savePassword() {
-    document.title = password.value;
     saveButton.setAttribute(
         'href',
         'data:text/plain;charset=utf-8,' + encodeURIComponent(password.value)
