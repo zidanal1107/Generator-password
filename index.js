@@ -28,13 +28,16 @@ function getPassword() {
 }
 
 function savePassword() {
-    if (passwordLenght.value == "") {
-        console.log("Panjang password invalid!");
-    } else {
-        saveButton.setAttribute(
-            'href',
-            'data:text/plain;charset=utf-8,' + encodeURIComponent(password.value)
-        );
-        saveButton.setAttribute('download', 'myPassword.txt');
+    if (password.value === "") {
+        alert("Password invalid!");
+        return;
     }
+
+    const a = document.createElement("a");
+    a.href =
+        "data:text/plain;charset=utf-8," +
+        encodeURIComponent(password.value);
+    a.download = "myPassword.txt";
+    a.click();
 }
+

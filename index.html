@@ -10,10 +10,12 @@
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
+
         .card {
             border-radius: 1rem;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
+
         .btn {
             border-radius: 0.5rem;
         }
@@ -30,15 +32,16 @@
                 <input type="number" class="form-control" id="passwordLenght" placeholder="Masukkan panjang password">
 
                 <label for="password" class="form-label text-uppercase fw-bold">Password</label>
-                <input type="text" class="form-control" id="password" readonly placeholder="Password akan muncul di sini">
+                <input type="text" class="form-control" id="password" readonly
+                    placeholder="Password akan muncul di sini">
 
                 <button class="btn btn-dark text-uppercase fw-bold btn-lg mt-2" onclick="getPassword()">
                     Generate Password
                 </button>
 
-                <button class="btn btn-primary text-uppercase fw-bold btn-lg mt-2" onclick="savePassword()" id="saveButton">
+                <a class="btn btn-primary text-uppercase fw-bold btn-lg mt-2" onclick="savePassword()" id="saveButton">
                     Save Password
-                </button>
+                </a>
             </div>
         </div>
     </div>
